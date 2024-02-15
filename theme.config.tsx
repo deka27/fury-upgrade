@@ -4,16 +4,18 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>FURY</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/deka27/fury-upgrade',
   },
   chat: {
     link: 'https://discord.com',
   },
-  docsRepositoryBase: 'https://github.com/',
+  docsRepositoryBase: 'https://github.com/deka27/fury-upgrade/tree/master',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'FURY',
   },
-  faviconGlyph: '📦',
+  toc: {
+    backToTop: true
+  }
 
 }
 
