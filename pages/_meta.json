@@ -1,15 +1,22 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "documentation": {
+    "title": "Docs",
+    "type": "page"
+  },
   "about": {
     "title": "About",
     "type": "page"
   },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+  "blog": {
+    "title": "Blog",
+    "type": "page"
+  },
+  "community": {
+    "title": "Community",
+    "type": "page"
   }
 }
