@@ -1,13 +1,12 @@
 {
-     "installation": "Installation",
-     "start": "Getting Started",
-     "tutorial": "Tutorial",
-     "pybullet": "FURY - pyBullet Integration Guide",
-     "---": {
-          "type": "separator"
-        },
-     "api": "API Reference",
-     "contribute": "Contribute",
-     "release": "Release Notes"
-
+  "installation": "Installation",
+  "start": "Getting Started",
+  "tutorial": "Tutorial",
+  "pybullet": "FURY - pyBullet Integration Guide",
+  "---": {
+    "type": "separator"
+  },
+  "api": "API Reference",
+  "contribute": "Contribute",
+  "release": "Release Notes"
 }

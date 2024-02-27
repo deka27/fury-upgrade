@@ -7,16 +7,26 @@
     "title": "Docs",
     "type": "page"
   },
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "blog": {
-    "title": "Blog",
-    "type": "page"
-  },
-  "community": {
-    "title": "Community",
-    "type": "page"
+  "pkg": {
+    "title": "Package",
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "About",
+        "href": "/pkg/about"
+      },
+      "license": {
+        "title": "License",
+        "href": "/pkg/license"
+      },
+      "blog": {
+        "title": "Blog",
+        "href": "/pkg/blog"
+      },
+      "community": {
+        "title": "Community",
+        "href": "/pkg/community"
+      }      
+    }
   }
 }

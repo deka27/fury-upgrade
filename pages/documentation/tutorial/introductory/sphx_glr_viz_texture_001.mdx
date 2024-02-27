@@ -1,0 +1,76 @@
+import { Steps } from "nextra/components";
+import { Callout } from "nextra/components";
+import { Screenshot } from "components/screenshot";
+import spheretexture from "../../../../public/assets/tutorials/introductory/sphx_glr_viz_texture_001.png";
+// import pyfile from "./viz_texture.py";
+// import ipynbfile from "./viz_texture.ipynb";
+
+# Sphere Texture
+
+In this tutorial, we will show how to create a sphere with a texture.
+
+<Steps>
+
+### Import necessary modules
+
+```python filename="python" copy
+from fury import actor, io, window
+from fury.data import fetch_viz_textures, read_viz_textures
+```
+
+### Create a scene to start
+
+```python filename="python" copy
+scene = window.Scene()
+```
+
+### Load an image (png, bmp, jpeg or jpg) using `io.load_image`.
+
+<Callout type="info" emoji="️ℹ️">
+  In this example, we will use `read_viz_textures` to access an image of the
+  Earth’s surface from the fury Github after using `fetch_viz_textures()` to
+  download the available textures.
+</Callout>
+
+```python filename="python" copy
+fetch_viz_textures()
+filename = read_viz_textures('1_earth_8k.jpg')
+image = io.load_image(filename)
+```
+
+Out:
+
+<Callout emoji="️📤">
+  Dataset is already in place. If you want to fetch it again please first remove
+  the folder /Users/skoudoro/.fury/textures
+</Callout>
+
+### Use `actor.texture_on_sphere` to add a sphere with the texture from your loaded image to the already existing scene.
+
+To add a texture to your scene as visualized on a plane, use `actor.texture` instead.
+
+```python filename="python" copy
+scene.add(actor.texture_on_sphere(image))
+```
+
+### Record the scene, or set interactive to True if you would like to manipulate your new sphere.
+
+```python filename="python" copy
+interactive = False
+if interactive:
+    window.show(scene, size=(600, 600), reset_camera=False)
+window.record(scene, size=(900, 768), out_path='viz_texture.png')
+```
+
+<Screenshot src={spheretexture} alt="spheretexture" />
+
+</Steps>
+
+{/* <div className="flex flex-col gap-6 p-12">
+  <a href={pyfile} download="viz_texture.py" className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'>
+    Download Python Source Code
+  </a>
+  <a href={ipynbfile} download="viz_texture.ipynb" className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'>
+    Download Jupyter Notebook
+  </a>
+</div> */}
